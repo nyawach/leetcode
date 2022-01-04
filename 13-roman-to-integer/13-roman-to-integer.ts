@@ -21,7 +21,6 @@ function romanToInt(s: string): number {
     const lomans = s.split('') as LomanChar[]
     const len = lomans.length
     let result = 0
-    let temp = 0
     for (let i = 0; i < len; i++) {
         const current = LomanRecord[lomans[i]]
         const next: number | null = LomanRecord[lomans[i + 1]]
