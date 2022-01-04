@@ -39,7 +39,3 @@ function romanToInt(s: string): number {
     return result
 };
 // @lc code=end
-
-// 文字列での数値決定方法
-// current >= next なら current 足す
-// current < next なら next - current 足す
