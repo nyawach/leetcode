@@ -6,9 +6,15 @@
 
 // @lc code=start
 function removeElement(nums: number[], val: number): number {
-    const filtered = nums.filter(n => n !== val)
-    nums.splice(0, nums.length, ...filtered)
-    return filtered.length
+    const len = nums.length
+    for (let i = 0; i < len; i++) {
+        const n  = nums[i]
+        if (n === val) {
+            nums.splice(i, 1)
+            i--
+        }
+    }
+    return nums.length
 };
 // @lc code=end
 
