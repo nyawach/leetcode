@@ -6,8 +6,17 @@
 
 // @lc code=start
 function removeDuplicates(nums: number[]): number {
-    const result = Array.from(new Set(nums))
-    nums.splice(0, nums.length, ...result)
-    return result.length
+    let i = 0
+    let setter = new Set()
+    const len = nums.length
+    for (let j = 0; j < len; j++) {
+        const n = nums[j]
+        if (!setter.has(n)) {
+            setter.add(n)
+            nums[i] = n
+            i++
+        }
+    }
+    return i
 };
 // @lc code=end
