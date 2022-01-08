@@ -7,14 +7,15 @@
 // @lc code=start
 function removeElement(nums: number[], val: number): number {
     const len = nums.length
-    for (let i = 0; i < len; i++) {
-        const n  = nums[i]
-        if (n === val) {
-            nums.splice(i, 1)
-            i--
+    let i = 0
+    for (let ni = 0; ni < len; ni++) {
+        const n  = nums[ni]
+        if (n !== val) {
+            nums[i] = n
+            i++
         }
     }
-    return nums.length
+    return i
 };
 // @lc code=end
 
