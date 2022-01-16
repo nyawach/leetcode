@@ -25,8 +25,6 @@ class ListNode {
  *     }
  * }
  */
-// [1,2,3,4,5,5,6,7,7,7,7,7,9,10,11]
-
 function deleteDuplicates(head: ListNode | null): ListNode | null {
     let current = head
     while (current && current.next) {
