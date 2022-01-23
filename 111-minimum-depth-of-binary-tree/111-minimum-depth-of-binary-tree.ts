@@ -34,9 +34,8 @@ class TreeNode {
 function minDepth(root: TreeNode | null): number {
     if (root == null) return 0
     const dl = minDepth(root.left)
-    const dr = minDepth(root.right)
-    if (dl === 0) return dr + 1
-    else if (dr === 0) return dl + 1
-    else return Math.min(dl, dr) + 1
+    const dr = minDepth(root.right) 
+    if (dl === 0 || dr === 0) return dr + dl + 1
+    return Math.min(dl, dr) + 1
 };
 // @lc code=end
