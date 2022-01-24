@@ -6,14 +6,11 @@
 
 // @lc code=start
 function maxProfit(prices: number[]): number {
+    let min = Number.MAX_SAFE_INTEGER
     let max = 0
-    for (let i = 0; i < prices.length - 1; i++) {
-        for(let j =  i+1; j < prices.length; j++) {
-            const buy = prices[i]
-            const sell = prices[j]
-            const profit = sell - buy
-            max = Math.max(profit, max)
-        }
+    for (let i = 0; i < prices.length; i++) {
+        min = Math.min(prices[i], min)
+        max = Math.max(max, prices[i] - min)
     }
     return max
 }
