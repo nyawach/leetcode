@@ -9,23 +9,13 @@
 // [99,99]\n2
 
 // @lc code=start
-function containsDuplicate(nums: number[]): boolean {
-    const map = new Map<number, boolean>()
+function containsNearbyDuplicate(nums: number[], k: number): boolean {
+    const set = new Set<number>()
     for (let i = 0; i < nums.length; i++) {
         const n = nums[i]
-        if (map.has(n)) return true
-        map.set(n, true)
-    }
-    return false
-}
-
-function containsNearbyDuplicate(nums: number[], k: number): boolean {
-    let i = 0
-    let j = i + k
-    while(nums[i] != null) {
-        if (containsDuplicate(nums.slice(i, j+1))) return true
-        i++
-        j++
+        if (i > k) set.delete(nums[i-k-1])
+        if (set.has(n)) return true
+        set.add(n)
     }
     return false
 }
