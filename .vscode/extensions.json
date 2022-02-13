@@ -1,6 +1,7 @@
 {
     "recommendations": [
         "leetcode.vscode-leetcode",
-        "golang.go"
+        "golang.go",
+        "formulahendry.vscode-mysql"
     ]
 }
