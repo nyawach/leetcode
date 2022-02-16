@@ -2,6 +2,7 @@
     "recommendations": [
         "leetcode.vscode-leetcode",
         "golang.go",
-        "formulahendry.vscode-mysql"
+        "formulahendry.vscode-mysql",
+        "esbenp.prettier-vscode"
     ]
 }
