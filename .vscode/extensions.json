@@ -3,6 +3,7 @@
         "leetcode.vscode-leetcode",
         "golang.go",
         "formulahendry.vscode-mysql",
-        "esbenp.prettier-vscode"
+        "esbenp.prettier-vscode",
+        "rust-lang.rust"
     ]
 }
